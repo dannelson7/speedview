@@ -1,9 +1,0 @@
-{
-  "name": "speedview",
-  "title": "SpeedView",
-  "id": "jid1-MmDjnsjlez2Sdw",
-  "description": "Quickly view all external JavaScript and CSS files on the current page.",
-  "author": "Dan Nelson",
-  "license": "MPL 2.0",
-  "version": "1.0"
-}
