@@ -1,0 +1,120 @@
+body {
+    background-color: #fff;
+    background-image: linear-gradient(to bottom, #fff, #fff, #FFFCF6); 
+    font-family: arial;
+    font-size: 100%;
+    margin: 0;
+    width: 800px;
+}
+
+h2 {
+    background-color: #555;
+    border-radius: 0.375em;
+    color: #eee;
+    font-size: 0.8125em;
+    margin: 1em 0.5em 0.25em 0.5em;
+    padding: 0.5em;
+    text-align: center;
+}
+
+h2:hover {
+    cursor: default;
+}
+
+h2 span {
+    color: #ddd;
+    font-weight: normal;
+}
+
+#bottom h2 {
+    background: #aaa;
+    color: #222;
+}
+
+ul {
+    list-style: none outside none;
+    margin: 0 0 1em 0;
+    padding: 0;
+}
+
+li a {
+    border: 0.1em solid transparent;
+    color: #444;
+    display: block;
+    font-size: 0.8125em;
+    height: 1em;
+    margin: 0.125em 0.5em;
+    overflow: hidden;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+}
+
+li a:hover {
+    background: #ccc;
+    border: 0.1em solid #d2d2d2;
+    border-radius: 0.25em;
+	color: #444;
+}
+
+li a img {
+    float: left;
+    height: 1em;
+    margin: 0 1em 0 0;
+    overflow: hidden;
+    width: 1em;
+}
+
+#list li a img:after {
+    content: "JS";
+    display: block;
+    font-size: 0.625em;
+    padding-top: 0.25em;
+    text-align: center;
+}
+
+#css li a img:after {
+    content: "CSS";
+    display: block;
+    font-size: 0.4375em;
+    padding-top: 0.675em;
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.inline {
+    display: inline;
+}
+
+#no-content p {
+    text-align: center;
+    font-size: 1.125em;
+    font-weight: bold;
+    color: #444;
+    margin: 10em;
+}
+
+#bottom {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+#bottom h2 {
+    border-right: 0 none;
+    border-bottom: 0 none;
+    border-left: 0 none;
+    border-radius: 0;
+    font-weight: normal;
+    margin: 0.5em 0 0 0;
+}
+
+#bottom h2 span {
+    color: #777;
+}
