@@ -17,6 +17,11 @@ h2:hover {
     cursor: default;
 }
 
+h2 span {
+    color: #666;
+    font-weight: normal;
+}
+
 ul {
     list-style: none outside none;
     margin: 0 0 1em 0;

@@ -1,15 +1,17 @@
 self.port.on("transferURL", function(urlContent) {
 	if (urlContent == "empty") {
 		document.getElementById("title-js").className = "hide";
-		document.getElementById("list").innerHTML = null;
+		document.getElementById("list").textContent = null;
 		document.getElementById("title-css").className = "hide";
-		document.getElementById("css").innerHTML = null;
+		document.getElementById("css").textContent = null;
 		document.getElementById("no-content").className = "show";
 	} else {
 		document.getElementById("title-js").className = "show";
-		document.getElementById("list").innerHTML = null;
+		document.getElementById("list").textContent = null;
+		document.getElementById("count-js").textContent = "0";
 		document.getElementById("title-css").className = "show";
-		document.getElementById("css").innerHTML = null;
+		document.getElementById("css").textContent = null;
+		document.getElementById("count-css").textContent = "0";
 		document.getElementById("no-content").className = "hide";
 		function getHeight(){
 			var clientHeight = document.getElementById('speedview').clientHeight;
@@ -23,17 +25,20 @@ self.port.on("transferURL", function(urlContent) {
 });
 
 self.port.on("transferScript", function(scriptContent) {
-	if (scriptContent.indexOf(".js") > -1) {
+	if (scriptContent) {
 		var nameQuery = scriptContent.substring(scriptContent.lastIndexOf('/')+1);
 		var name = nameQuery.split('?',1);
 		var list = document.getElementById("list");
 		var entry = document.createElement('li');
 		var link = document.createElement('a');
+		var countJS = parseInt(document.getElementById("count-js").textContent);
 		link.setAttribute('href', scriptContent);
 		link.setAttribute('target', '_blank');
 		link.appendChild(document.createTextNode(name));
 		list.appendChild(entry);
 		entry.appendChild(link);
+		countJS++
+		document.getElementById("count-js").textContent = countJS;
 	}
 });
 
@@ -44,11 +49,14 @@ self.port.on("transferStyle", function(styleContent) {
 		var list = document.getElementById("css");
 		var entry = document.createElement('li');
 		var link = document.createElement('a');
+		var countCSS = parseInt(document.getElementById("count-css").textContent);
 		link.setAttribute('href', styleContent);
 		link.setAttribute('target', '_blank');
 		link.appendChild(document.createTextNode(name));
 		list.appendChild(entry);
 		entry.appendChild(link);
+		countCSS++
+		document.getElementById("count-css").textContent = countCSS;
 	}
 });
 
